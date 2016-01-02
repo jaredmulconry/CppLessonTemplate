@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+# Exluding all bin folders
+**/bin/**
+!**/bin/DoNotDelete.txt
