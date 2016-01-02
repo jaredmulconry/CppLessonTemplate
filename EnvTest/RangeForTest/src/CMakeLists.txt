@@ -1,5 +1,5 @@
 #Range-For compile tests
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 2.8)
 project(RangeForTest)
 
 add_executable(RangeForTest EXCLUDE_FROM_ALL main.cpp)
