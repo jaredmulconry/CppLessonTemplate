@@ -24,4 +24,5 @@ int main()
 	
 	foo(a1.x);
 	bar(std::move(a1));
+	(void)a;
 }
