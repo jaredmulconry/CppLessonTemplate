@@ -3,10 +3,10 @@ cmake_minimum_required(VERSION 2.8)
 project(Exercise)
 
 #Sets common build flags
-if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+if("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES MSVC)
 	add_compile_options(/W4 /WX /sdl /nologo /EHsc)
 	
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+elseif("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES GNU OR "\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES Clang)
 	add_compile_options(-std=c++1y -pthread -Wall -Wextra -Werror)
 	
 endif()
