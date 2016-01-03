@@ -5,8 +5,8 @@ enum class B : unsigned short;
 enum class A{a, b, c};
 enum class B :  unsigned short{a, b, c};
 
-void foo(A x){}
-void foo(B x){}
+void foo(A){}
+void foo(B){}
 
 int main()
 {
