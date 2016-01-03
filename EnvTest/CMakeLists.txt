@@ -21,8 +21,7 @@ function(AttemptCompile arg1 arg2 arg3 arg4)
 	try_run(COMPILE_RESULT RUN_RESULT ${BIN_DIR} ${SRC_DIR}/main.cpp 
 					COMPILE_OUTPUT_VARIABLE COMPILE_OUTPUT RUN_OUTPUT_VARIABLE RUN_OUTPUT)
 	if(NOT COMPILE_RESULT EQUAL 0 OR NOT RUN_RESULT)
-		set(ERROR_MESSAGE "${arg4}\n${TOOLCHAIN_ID_STRING}\nCompile Error:\n${COMPILE_OUTPUT}\n\
-Run Error: ${RUN_OUTPUT}")
+		set(ERROR_MESSAGE "${arg4}\n${TOOLCHAIN_ID_STRING}\nCompile Error:\n${COMPILE_OUTPUT}\nRun Error: ${RUN_OUTPUT}")
 		message(FATAL_ERROR ${ERROR_MESSAGE})
 	endif()
 	message(STATUS ${arg1} " compiled and ran successfully.")
