@@ -4,10 +4,12 @@ project(Exercise)
 
 #Sets common build flags
 if("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES MSVC)
-	add_compile_options(/W4 /WX /sdl /nologo /EHsc)
+	set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "/W4 /WX /sdl /nologo /EHsc")
+	#add_compile_options(/W4 /WX /sdl /nologo /EHsc)
 	
 elseif("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES GNU OR "\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES Clang)
-	add_compile_options(-std=c++1y -pthread -Wall -Wextra -Werror)
+	set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++1y -pthread -Wall -Wextra -Werror")
+	#add_compile_options(-std=c++1y -pthread -Wall -Wextra -Werror)
 	
 endif()
 
