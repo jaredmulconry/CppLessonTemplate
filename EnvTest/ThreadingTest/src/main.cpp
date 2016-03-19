@@ -7,6 +7,7 @@
 
 int tFuncResult = 0;
 
+//Accumulates powers of 2 with the exponents in the range [0, iterations)
 int AccumulateExp2(int iterations)
 {
 	auto acc = 0;
@@ -27,6 +28,7 @@ int FutureFunc(int iterations) noexcept
 {
 	return AccumulateExp2(iterations);
 }
+
 
 using namespace std;
 int main()
