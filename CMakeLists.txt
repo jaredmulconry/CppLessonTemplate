@@ -1,6 +1,7 @@
 #Root CMakeLists
 cmake_minimum_required(VERSION 2.8)
 project(Exercise)
+cmake_policy(SET CMP0056 NEW)
 
 #Sets common build flags
 if("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES MSVC)
