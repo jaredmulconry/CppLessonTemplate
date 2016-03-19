@@ -30,3 +30,6 @@
 # Exluding all bin folders
 **/bin/**
 !**/bin/DoNotDelete.txt
+
+# Excluding CMake artifacts
+**/CMakeFiles

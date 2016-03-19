@@ -1,7 +1,8 @@
 #Environment test CMakeLists
 cmake_minimum_required(VERSION 2.8)
-cmake_policy(SET CMP0056 NEW)
-
+if(POLICY CMP0056)
+	cmake_policy(SET CMP0056 NEW)
+endif(POLICY CMP0056)
 set(TOOLCHAIN_ID_STRING "Platform ID: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
 
 #AttemptCompileRun
