@@ -27,7 +27,7 @@ if("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES MSVC)
 	endif()
 	
 elseif("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES GNU OR "\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES Clang)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y -pthread -Wall -Wextra -pedantic -Werror ")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -Wall -Wextra -pedantic -Werror ")
 	
 endif()
 

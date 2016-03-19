@@ -6,7 +6,7 @@
 using namespace std;
 
 template<typename... Ts>
-void print_all_args(const Ts&... vs){}
+void print_all_args(const Ts&...){}
 template<typename T, typename... Ts>
 void print_all_args(const T& v, const Ts&... vs)
 {
