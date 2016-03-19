@@ -5,7 +5,7 @@ if(POLICY CMP0056)
 	cmake_policy(SET CMP0056 NEW)
 endif(POLICY CMP0056)
 
-add_custom_target(CheckCMakeDependencyChange ALL COMMAND ${CMAKE_COMMAND} -E touch ./CMakeLists.txt ./EnvTest/CMakeLists.txt)
+add_custom_target(CheckCMakeDependencyChange ALL COMMAND ${CMAKE_COMMAND} ${CMAKE_CURRENT_SOURCE_DIR})
 
 #Sets common build flags
 if("\"${CMAKE_CXX_COMPILER_ID}\"" MATCHES MSVC)
